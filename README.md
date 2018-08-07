@@ -10,6 +10,10 @@ This has been tested with laravel `5.6`.
 - Validate envx.php variables using the Laravel Validator by defining rules in config/envx-validator.php
 - Custom validation rule `required_ifany` to apply rules to an atrribute if another array attribute has a given value
 
+## Usage
+
+Just like laravel env => `envx('attribute', 'default')`
+
 ## Installation
 
 Via Composer:
