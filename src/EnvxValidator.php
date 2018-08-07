@@ -2,7 +2,6 @@
 
 namespace Zeyad82\LaravelEnvx;
 
-use Exception;
 use Validator;
 
 class EnvxValidator
@@ -38,7 +37,7 @@ class EnvxValidator
                 . PHP_EOL
                 . implode(PHP_EOL, $messages);
 
-            throw new Exception($msg);
+            throw new LaravelEnvxException($msg);
         }
     }
     
