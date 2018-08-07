@@ -25,7 +25,7 @@ Via Composer:
 If you don't use auto-discovery, add the service provider your `config/app.php`:
 
 ``` php
-    Zeyad82\\LaravelEnvx\\LaravelEnvxServiceProvider::class,
+    Zeyad82\LaravelEnvx\LaravelEnvxServiceProvider::class,
 ```
 
 #### Publish configuration file
