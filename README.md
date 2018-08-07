@@ -68,6 +68,15 @@ return [
 
 ```
 
+## Screenshot
+
+### Command Line
+![Screenshot](Screenshot_1.png)
+
+### Browser
+![Screenshot](Screenshot_2.png)
+
+
 ## Security
 
 If you discover any security related issues, please email zeyad82@yahoo.com instead of using the issue tracker.
