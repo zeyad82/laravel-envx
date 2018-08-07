@@ -2,6 +2,7 @@ Laravel Envx
 ======
 
 Laravel Envx is a custom php environment file as an array so that it can have associative and multidimensional arrays with validation rules in order to avoid any unexpected behaviour especially if there are several instances of the project. 
+
 This has been tested with laravel `5.6`.
 
 ## Highlights
@@ -21,7 +22,7 @@ Via Composer:
 If you don't use auto-discovery, add the service provider your `config/app.php`:
 
 ``` php
-    Zeyad82\\LaravelEnvx\\LaravelEnvxServiceProvider::class,
+    Zeyad82\LaravelEnvx\LaravelEnvxServiceProvider::class,
 ```
 
 #### Publish configuration file
