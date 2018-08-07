@@ -39,6 +39,10 @@ This will publish `config/envx-validator.php` and `envx.example.php` then run
 ``` bash
     cp envx.example.php envx.php
 ```
+If you will have different envx.php, add `envx.php` to `.gitignore` in your project root
+
+
+
 If you will use envx in config files, the only way I found is to append the follwing to `bootstrap/app.php` after `ExceptionHandler`
 ``` php
 
@@ -47,8 +51,6 @@ $app->singleton('envx', function ($app) {
 });
 
 ```
-If you will have different envx.php, add `envx.php` to `.gitignore` in your project root
-
 ### Example configuration file
 ``` php
 <?php
