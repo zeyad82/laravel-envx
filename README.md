@@ -39,6 +39,14 @@ This will publish `config/envx-validator.php` and `envx.example.php` then run
 ``` bash
     cp envx.example.php envx.php
 ```
+If you will use envx in config files, the only way I found is to append the follwing to `bootstrap/app.php` after `ExceptionHandler`
+``` php
+
+$app->singleton('envx', function ($app) {
+    return new Zeyad82\LaravelEnvx\EnvxService;
+});
+
+```
 If you will have different envx.php, add `envx.php` to `.gitignore` in your project root
 
 ### Example configuration file

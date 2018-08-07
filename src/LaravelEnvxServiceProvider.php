@@ -30,9 +30,9 @@ class LaravelEnvxServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/config/envx-validator.php', 'envx-validator');
 
-        $this->app->singleton('envx', function ($app) {
+        $this->app->bindIf('envx', function ($app) {
             return new EnvxService;
-        });
+        }, true);
     }
 
     public function bootValidationRule()
