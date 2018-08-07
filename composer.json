@@ -1,0 +1,30 @@
+{
+    "name": "zeyad82/laravel-envx",
+    "description": "Laravel custom env with validation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zeyad Mounir",
+            "email": "zeyad82@yahoo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zeyad82\\LaravelEnvx\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zeyad82\\LaravelEnvx\\LaravelEnvxServiceProvider"
+            ]
+        }
+    }
+
+}
