@@ -34,7 +34,7 @@ class EnvxValidator
                 $messages[] = $message;
             }
 
-            $msg = 'The envx.php file has some problems:'
+            $msg = 'The envx.php file has errors, have a look at config/envx-validator.php:'
                 . PHP_EOL
                 . implode(PHP_EOL, $messages);
 
