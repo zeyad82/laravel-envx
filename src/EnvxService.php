@@ -8,7 +8,9 @@ class EnvxService
 
     public function __construct()
     {
-        if(file_exists(base_path('envx.php'))) {
+        $path = base_path('envx.php');
+
+        if(file_exists($path) && substr(`php -l $path`, 0, 16) == 'No syntax errors') {
             $this->variables = require base_path('envx.php');
         }        
     }
