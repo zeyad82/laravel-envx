@@ -15,7 +15,7 @@ class LaravelEnvxServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->bootValidationRule();
+        $this->bootValidationsRule();
 
         $this->publishes([
             __DIR__ . '/config/envx-validator.php' => config_path('envx-validator.php'),
@@ -35,7 +35,7 @@ class LaravelEnvxServiceProvider extends ServiceProvider
         }, true);
     }
 
-    public function bootValidationRule()
+    public function bootValidationsRule()
     {
         // required if any of the values of an array equal to a specific value
         Validator::extendImplicit('required_ifany', function ($attribute, $value, $parameters, $validator) {
@@ -51,5 +51,9 @@ class LaravelEnvxServiceProvider extends ServiceProvider
         Validator::replacer('required_ifany', function ($message, $attribute, $rule, $parameters) {
             return str_replace([':other', ':value'], [$parameters[0], $parameters[1]], $message);
         });
+
+        Validator::extend('uuid', function ($attribute, $value, $parameters, $validator) {
+            return \Ramsey\Uuid\Uuid::isValid($value);
+        }, 'The :attribute is not valid.');
     }
 }
