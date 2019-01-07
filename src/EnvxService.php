@@ -20,8 +20,8 @@ class EnvxService
         return $this->variables;
     }
 
-    public function get($key)
+    public function get($key, $default = null)
     {
-        return array_get($this->variables, $key);
+        return array_get($this->variables, $key, $default);
     }
 }
